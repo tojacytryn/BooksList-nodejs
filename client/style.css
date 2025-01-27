@@ -31,24 +31,22 @@ tr:nth-child(1){
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 25px;
-    border: 1px solid black;
+    border: 2px solid black;
     margin: 25px;
 }
 
 input[type=text] {
-    border: 1px black solid;
+    border: 2px black solid;
     border-radius: 5px;
     padding: 5px 15px;
     transition: transform .2s;
 }
 
 input[type=button] {
-    border: 1px black solid;
+    border: 2px black solid;
     border-radius: 5px;
     padding: 5px 15px;
-    background-color: #87c9ff;
-    box-shadow: black 0px 0px 4px -1px;
+    background-color: #fff;
     transition: transform .2s;
 }
 
