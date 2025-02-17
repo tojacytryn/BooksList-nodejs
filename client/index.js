@@ -71,7 +71,7 @@ addEventListener("DOMContentLoaded", async (event) => {
         console.log(book);
         let td = document.createElement("td")
         td.textContent = book.id
-        tr.appendChild(td)
+        tr.appendChild(td);
         td = document.createElement("td")
         td.textContent = book.title
         td.contentEditable = true;
