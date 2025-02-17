@@ -65,3 +65,10 @@ tr:nth-child(odd):not(:nth-child(1)) {
 tr:hover:not(:nth-child(1)) {
     background-color: #e6e6e6;
 }
+
+#removeButton {
+    background-color: red;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+}

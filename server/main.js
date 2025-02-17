@@ -47,6 +47,36 @@ app.get('/add-book/:title/:author', (req, res)=>{
   })
 })
 
+app.get('/remove-book/:id', (req, res)=>{
+  const id = req.params.id
+
+  let sql = `DELETE FROM books WHERE id = ${id}`
+  conn.query(sql, (err, data, data_info) => {
+    if (err) {
+      res.send("Nie udało się usunąć danych")
+      console.log(err);
+    } else {
+      res.send("Usunięto dane: ")
+    }
+  })
+})
+
+app.get('/update-book/:id/:title/:author', (req, res)=>{
+  const id = req.params.id
+  const title = req.params.title
+  const author = req.params.author
+  
+  let sql = `UPDATE books SET title = "${title}", author = "${author}" WHERE id = ${id}`
+  conn.query(sql, (err, data, data_info) => {
+    if (err) {
+      res.send("Nie udało się zaaktualizować danych")
+      console.log(err);
+    } else {
+      res.send("Zaaktulizowano dane: ")
+    }
+  })
+})
+
 app.listen(3000, () => {
   console.log('Serwer uruchomiony na porcie 3000')
 })
